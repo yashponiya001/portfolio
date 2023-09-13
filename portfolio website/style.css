@@ -21,7 +21,7 @@
 }
 html{
     font-size: 62.5;
-    overflow: hidden;
+    scroll-behavior: smooth;
      
 }
 body{
@@ -41,7 +41,7 @@ section{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2em 9%;
+    padding: 2 rem 9%;
     background-color: var(--bg-color);
     display: flex;
     justify-content: space-between;
@@ -59,19 +59,19 @@ section{
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
-    
-
-
+    padding-left: 20px;
 }
+
 .navbar a{
     font-size: 1.7rem;
      color: var(--text-color);
      margin-left: 4rem;
      transition: .3s;
+     padding-left: 2rem;
 }
 
 .navbar a:hover,
-.navbar a :active{
+.navbar a:active{
     color: var(--main-color);
 }
 #menu-icon {
@@ -186,23 +186,30 @@ text-align: center;
     gap: 2rem;
 }
 
-.services-container .services-box{
-     flex: 1 1 3rem;
+
+
+.services-container .services-box {
+     flex:  1 1 1rem;
      background: var(--second-bg-color);
-     padding: 3rem 2 rem 4rem;
+    padding: 3rem  2rem  4rem;
      border-radius: 2rem;
      text-align: center; 
      border: .2rem solid var(--bg-color);
      pad: .5px;
      margin: 3px;
      transform: .5s ease;
+     cursor: pointer;
+     &:hover{
+        background-color: var(--second-bg-color);
+        cursor: hand;
     }
-
+    }
+    
     .services-container .services-box:hover{
         border-color: var(--main-color);
         transform: scale(1.02);
     }
-
+    
     .services-box i{
         font-size: 6rem;
         color: var(--main-color);
@@ -224,36 +231,38 @@ text-align: center;
     margin-bottom: 4rem;
     text-align: center;
 }
-.portfolio-container{
-    display: flex;
-    grid-template-columns: 3, 1fr;
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2.5rem;
 
 }
 .portfolio-container  .portfolio-box{
-    flex: 1 1 1rem;
-    padding: 3rem 2 rem 3rem;
+flex: 1 1 30rem;
+    padding: 3rem 2rem 3rem;
     position: relative;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
-    display: flex;
+    display: grid;
 
 }
 .portfolio-box img{
     width: 100%;
-    transition: .5s ease;
+    transition: .5s ease; 
 }
 .portfolio-box:hover img{
-    transform: scale(1.1);
+    transform: scale(1.0);
 }
 
 .portfolio-box .portfolio-layer{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100;
+    top :0;
+    bottom: 0;
+    width: 100%;
     height: 100;
     background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
     display: flex;
@@ -261,9 +270,9 @@ text-align: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 2rem;
+    padding: 0.4rem;
     transform: translateY(100%);
-    transition: .5s ease;
+    transition: .5s ease;   
 }
 
 .portfolio-box:hover .portfolio-layer{
@@ -276,15 +285,15 @@ text-align: center;
 }
 .portfolio-layer p{
     color: #1f242d;
-    font-size: 1rem;
+    font-size: 1.6rem;
     margin:  .3rem 0 1rem;
 }
 .portfolio-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     background: var(--text-color);
     border-radius: 50%;
 }
@@ -341,6 +350,7 @@ text-align: center;
 }
 .footer-text p{
     font-size: 1.6rem;
+    color: #fff;
 }
 .footer-iconTop a{
     display: inline-flex;
@@ -377,6 +387,10 @@ padding: 10rem 3% 2rem;
   }
   .footer{
     padding: 2rem 3%;
+    
+  }
+  .footer-text p{
+color: aliceblue;
   }
 }
 
